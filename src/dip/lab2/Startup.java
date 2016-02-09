@@ -18,14 +18,19 @@ import javax.swing.JOptionPane;
  * 
  * @author your name goes here
  */
+import dip.lab2.ServiceQuality;
+
 public class Startup {
-    public static enum ServiceQuality {
-           GOOD, FAIR, POOR
-    };
- 
+    
+    
     public static void main(String[] args) {
+        ServiceQuality quality;
+        quality = dip.lab2.ServiceQuality.GOOD;
         
+        TipCalculator tipper = new FoodServiceTipCalculator(quality, 15.30);
+        String totalWithTip = "";
+        totalWithTip += tipper.getTip();
+        System.out.println(totalWithTip);
         
     }
-
 }
