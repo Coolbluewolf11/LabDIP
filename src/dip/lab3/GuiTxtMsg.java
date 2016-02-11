@@ -10,5 +10,7 @@ package dip.lab3;
  * @author Tim
  */
 public class GuiTxtMsg extends TxtMsg{
-    
+    GuiTxtMsg(String msg){
+        
+    }
 }
