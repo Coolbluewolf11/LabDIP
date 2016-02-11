@@ -25,11 +25,10 @@ public class Startup {
     
     public static void main(String[] args) {
         ServiceQuality quality;
-        quality = dip.lab2.ServiceQuality.GOOD;
-        
-        TipCalculator tipper = new FoodServiceTipCalculator(quality, 15.30);
-        String totalWithTip = "";
-        totalWithTip += tipper.getTip();
+        quality = ServiceQuality.GOOD;
+        double subTotal = 15.30;
+        TipCalculator tipper = new FoodServiceTipCalculator(quality, subTotal);
+        double totalWithTip = subTotal + tipper.getTip();
         System.out.println(totalWithTip);
         
     }
